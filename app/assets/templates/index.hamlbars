@@ -5,3 +5,5 @@
   %input{ :type => "text", :name => "id" }
   %button{ :type => 'submit'}
     Search
+
+.search-result

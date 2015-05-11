@@ -10,4 +10,3 @@ class TwitterFrontEndEx.Views.Index extends Backbone.View
     event.preventDefault()
     user = new TwitterFrontEndEx.Models.User(id: @.$('input[name=id]').val())
     user.fetch()
-    debugger

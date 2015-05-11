@@ -1,6 +1,6 @@
 class TwitterFrontEndEx.Models.User extends Backbone.Model
-  urlRoot: "/api/users"
 
   initialize: ->
+    this.urlRoot = TwitterFrontEndEx.BaseUrl + "/api/users"
     this.tweets = new TwitterFrontEndEx.Collections.Tweets()
-    this.tweets.url = '/user/' + this.id + '/tweets'
+    this.tweets.url = this.urlRoot + this.id + '/tweets'

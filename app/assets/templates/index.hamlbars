@@ -1,0 +1,7 @@
+%h1
+  Welcome to Tweet Search
+%form.user-search-form
+  Search by twitter handle @
+  %input{ :type => "text", :name => "id" }
+  %button{ :type => 'submit'}
+    Search

@@ -1,5 +1,9 @@
-.profile-container
-  %h3= @model.get("name")
-  .screen-name
-    @
-    = @model.get("screen_name")
+.container
+  .row.profile-container
+    .col-md-4
+      %img{ :src => @model.get("profile_image_url") }
+    .col-md-8
+      %h3= @model.get("name")
+      .screen-name
+        @
+        = @model.get("screen_name")

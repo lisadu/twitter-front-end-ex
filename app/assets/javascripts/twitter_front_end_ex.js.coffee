@@ -6,7 +6,7 @@ window.TwitterFrontEndEx =
   Routers: {}
   BaseUrl: null
   initialize: ->
-    TwitterFrontEndEx.BaseUrl = $('.backend-url').data('backend-url')
+    TwitterFrontEndEx.BaseUrl = $('.backend-url').data('url')
     view = new TwitterFrontEndEx.Views.Index()
     $('body').html(view.el)
     view.render()

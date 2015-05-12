@@ -6,4 +6,4 @@
   %button{ :type => 'submit'}
     Search
 
-.search-result
+.user-search-result

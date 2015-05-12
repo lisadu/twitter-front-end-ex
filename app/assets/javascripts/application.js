@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-//= require handlebars
+//= require hamlcoffee
 //= require twitter_front_end_ex
 //= require_tree ../templates
 //= require_tree ./models

@@ -1,0 +1,5 @@
+.profile-container
+  %h3= @model.get("name")
+  .screen-name
+    @
+    = @model.get("screen_name")

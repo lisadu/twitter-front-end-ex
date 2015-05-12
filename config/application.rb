@@ -10,6 +10,8 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
+require "action_view"
+require "action_view/template/resolver"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

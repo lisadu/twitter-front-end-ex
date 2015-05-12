@@ -1,5 +1,5 @@
 class TwitterFrontEndEx.Views.Index extends Backbone.View
-  template: HandlebarsTemplates['index']
+  template: JST['index']
   events:
     'submit .user-search-form' : 'findUser'
 
@@ -9,4 +9,9 @@ class TwitterFrontEndEx.Views.Index extends Backbone.View
   findUser: (event) ->
     event.preventDefault()
     user = new TwitterFrontEndEx.Models.User(id: @.$('input[name=id]').val())
-    user.fetch()
+    user.fetch(
+      success: ->
+        userView = new TwitterFrontEndEx.Views.User(model: user)
+        @.$('.user-search-result').html(userView.el)
+        userView.render()
+    )

@@ -22,8 +22,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'backbone-on-rails'
-gem 'handlebars_assets'
-gem 'hamlbars'
+gem 'haml_coffee_assets'
+gem 'execjs'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

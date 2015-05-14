@@ -1,9 +1,12 @@
 %h1
   Welcome to Tweet Search
-%form.user-search-form
-  Search by twitter handle @
-  %input{ :type => "text", :name => "id" }
-  %button{ :type => 'submit'}
-    Search
+.container
+  %form.user-search-form
+    .row
+      .col-md-12
+        Search by twitter handle @
+        %input{ :type => "text", :name => "id" }
+        %button{ :type => 'submit'}
+          Search
 
 .user-search-result

@@ -1,10 +1,10 @@
 .row
   %form.filter-tweets-form
-    .col-md-2
+    .col-md-1
       Filter by:
-    .col-md-4
+    .col-md-5
       From:
-      %input{ :type => "text", :name => "since" }
+      %input{ :type => "text", :name => "since", :size => '20' }
       To:
       %input{ :type => "text", :name => "until" }
     .col-md-2
@@ -16,5 +16,18 @@
     .col-md-2
       %button{ :type => 'submit'}
         Find Tweets
-.row
-  = @collection
+
+- for tweet in @collection.models
+  .row
+    .col-md-2
+      - if tweet.get('media') && tweet.get('media').length > 0
+        %img{ :src => tweet.get('media')[0] }
+      .timestamp
+        -# TODO: format timestamp for display
+        = tweet.get('created_at')
+    .col-md-8
+      .tweet-text
+        = tweet.get('text')
+      .tweet-info
+        Retweets:
+        = tweet.get('retweet_count')

@@ -9,11 +9,10 @@ class TwitterFrontEndEx.Views.Tweets extends Backbone.View
     console.log(@collection)
     @$el.html(@template(collection: @collection))
 
-  findTweets: =>
-    debugger
-    @data = $('.filter-tweets-form').data()
-    @collection.set(with_picture: true)
+  findTweets: (event) ->
+    event.preventDefault()
     @collection.fetch(
-      success: ->
+      data: $('.filter-tweets-form').serialize()
+      success: =>
         @render()
     )

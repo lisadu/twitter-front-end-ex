@@ -4,3 +4,9 @@ class TwitterFrontEndEx.Views.User extends Backbone.View
 
   render: ->
     @$el.html(@template(model: @model))
+    @model.tweets.fetch(
+      success: =>
+        tweetsView = new TwitterFrontEndEx.Views.Tweets(collection: @model.tweets)
+        tweetsView.render()
+    )
+

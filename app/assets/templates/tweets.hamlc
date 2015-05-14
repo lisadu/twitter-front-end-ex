@@ -1,0 +1,20 @@
+.row
+  %form.filter-tweets-form
+    .col-md-2
+      Filter by:
+    .col-md-4
+      From:
+      %input{ :type => "text", :name => "since" }
+      To:
+      %input{ :type => "text", :name => "until" }
+    .col-md-2
+      Min retweets:
+      %input{ :type => "text", :name => "min_retweets" }
+    .col-md-2
+      Has image:
+      %input{ :type => "checkbox", :name => "with_picture" }
+    .col-md-2
+      %button{ :type => 'submit'}
+        Find Tweets
+.row
+  = @collection

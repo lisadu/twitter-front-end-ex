@@ -6,7 +6,6 @@ class TwitterFrontEndEx.Views.Tweets extends Backbone.View
     'submit .filter-tweets-form': 'findTweets'
 
   render: ->
-    console.log(@collection)
     @$el.html(@template(collection: @collection))
 
   findTweets: (event) ->

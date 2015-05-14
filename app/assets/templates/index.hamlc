@@ -1,12 +1,14 @@
-%h1
-  Welcome to Tweet Search
-.container
-  %form.user-search-form
-    .row
-      .col-md-12
-        Search by twitter handle @
-        %input{ :type => "text", :name => "id" }
-        %button{ :type => 'submit'}
-          Search
 
-.user-search-result
+.page-container
+  %h1
+    Welcome to Tweet Search
+  .container
+    %form.user-search-form
+      .row
+        .col-md-12
+          Search by twitter handle @
+          %input{ :type => "text", :name => "id" }
+          %button{ :type => 'submit'}
+            Search
+
+  .user-search-result

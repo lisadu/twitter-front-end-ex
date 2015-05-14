@@ -2,14 +2,14 @@
   %form.filter-tweets-form
     .col-md-1
       Filter by:
-    .col-md-5
+    .col-md-4
       From:
-      %input{ :type => "text", :name => "since", :size => '20' }
+      %input{ :type => "text", :name => "since", :size => '8' }
       To:
-      %input{ :type => "text", :name => "until" }
-    .col-md-2
+      %input{ :type => "text", :name => "until", :size => '8' }
+    .col-md-3
       Min retweets:
-      %input{ :type => "text", :name => "min_retweets" }
+      %input{ :type => "text", :name => "min_retweets", :size => '8' }
     .col-md-2
       Has image:
       %input{ :type => "checkbox", :name => "with_picture" }
@@ -18,16 +18,16 @@
         Find Tweets
 
 - for tweet in @collection.models
-  .row
+  .row.tweet-container
     .col-md-2
-      - if tweet.get('media') && tweet.get('media').length > 0
-        %img{ :src => tweet.get('media')[0] }
       .timestamp
-        -# TODO: format timestamp for display
         = tweet.get('created_at')
-    .col-md-8
-      .tweet-text
-        = tweet.get('text')
       .tweet-info
         Retweets:
         = tweet.get('retweet_count')
+    .col-md-10
+      .tweet-text
+        = tweet.get('text')
+      - if tweet.get('media') && tweet.get('media').length > 0
+        %img.tweet-img{ :src => tweet.get('media')[0] }
+

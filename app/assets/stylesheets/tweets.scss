@@ -1,0 +1,21 @@
+.page-container {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  .profile-container{
+    background-color:#0084B4;
+  }
+  .profile-photo {
+    margin: 6px;
+  }
+  .tweets-container {
+    padding: 6px;
+    .tweet-container {
+      border-radius: 6px;
+      padding: 6px;
+      border: 1px solid #e0dce0;
+    }
+    .timestamp {
+      font-size: smaller;
+      color: #666666;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .row
   %form.filter-tweets-form
-    .col-md-1
+    .col-md-2
       Filter by:
     .col-md-4
       From:

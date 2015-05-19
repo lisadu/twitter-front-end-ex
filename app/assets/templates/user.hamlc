@@ -2,16 +2,18 @@
   .row.profile-container
     .col-md-3
       %img.profile-photo{ :src => @model.get("profile_image_url") }
-    .col-md-6
+    .col-md-3.user-name
       %h3= @model.get("name")
-      .screen-name
-        @
-        = @model.get("screen_name")
-    .col-md-3
+    .col-md-2.screen-name
+      @
+      = @model.get("screen_name")
+    .col-md-4
       Followers:
       = @model.get("followers_count")
       Friends:
       = @model.get("friends_count")
+      Reputation:
+      = @model.get("rep_score")
   .row
     .col-md-12
       .tweets-container

@@ -10,6 +10,7 @@ class TwitterFrontEndEx.Views.Index extends Backbone.View
     event.preventDefault()
     user = new TwitterFrontEndEx.Models.User(id: @.$('input[name=id]').val())
     user.fetch(
+      data: {include_rep_score: true}
       success: ->
         userView = new TwitterFrontEndEx.Views.User(model: user)
         @.$('.user-search-result').html(userView.el)

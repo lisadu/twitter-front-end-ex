@@ -1,8 +1,11 @@
 
 .page-container
-  %h1
-    Welcome to Tweet Search
   .container
+    .row
+      .col-md-12
+        %h1
+          Welcome to Tweet Search
+
     %form.user-search-form
       .row
         .col-md-12
